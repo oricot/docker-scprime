@@ -1,5 +1,5 @@
 # Introduction
-Source for the SiaPrime docker image at https://cloud.docker.com/repository/docker/afdy/hyperspace
+Source for the SiaPrime docker image at https://cloud.docker.com/repository/docker/afdy/siaprime
 
 # SiaPrime?
 See the official site at https://siaprime.net/
