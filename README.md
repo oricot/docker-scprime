@@ -8,12 +8,12 @@ Rent out your hard disk space to earn spare cash, or buy cheap disk space. Encou
 
 # Notes
 * Replace /my/local/disk with the path to your spare persistent storage.
-* Additionally pass -p 4280:4280 if you really want to expose the API port (avoid!).
+* Additionally pass -p 5580:5580 if you really want to expose the API port (avoid!).
 * It'll take a while to sync with the network before it becomes operational (dependent on your disk speed).
 * You'll need to setup your wallet with some coins to host...
 * Optionally to unlock your wallet on startup, add to the docker run line -e SIAPRIME_WALLET_PASSWORD=YourSecretPassword (NB: Assume you understand the security risks, and you're the only one with physical and logical access)
 * To start the daemon:
-  docker run -d --name=siaprime -v /my/local/disk/hs:/hs -p 4281:4281 -p 4282:4282 --restart=always afdy/siaprime
+  docker run -d --name=siaprime -v /my/local/disk/hs:/hs -p 5581:5581 -p 5582:5582 --restart=always afdy/siaprime
 
 Common commands in case you need some help!
 
