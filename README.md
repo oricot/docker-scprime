@@ -19,13 +19,13 @@ Rent out your hard disk space to earn spare cash, or buy cheap disk space. Encou
 Common commands in case you need some help!
 
 # Jump on the CLI of the node:
-```docker exec -it siaprime bash```
+`docker exec -it siaprime bash`
 
 # See client sync status.
-```spc```
+`spc`
 
 # See host configuration
-```spc host -v```
+`spc host -v`
 
 # Set an initial host configuration to seed.
 ```
