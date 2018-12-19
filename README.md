@@ -8,8 +8,7 @@ Rent out your hard disk space to earn spare cash, or buy cheap disk space. Encou
 
 # Notes
 * To start the daemon:
-  ```docker run -d --name=siaprime -v /my/local/disk/hs:/hs -p 4281:4281 -p 4282:4282 --restart=always afdy/siaprime```
-
+  `docker run -d --name=siaprime -v /my/local/disk/hs:/hs -p 4281:4281 -p 4282:4282 --restart=always afdy/siaprime`
 * Replace ```/my/local/disk``` with the path to your spare persistent storage.
 * Additionally pass ```-p 4280:4280``` if you really want to expose the API port (avoid!).
 * It'll take a while to sync with the network before it becomes operational (dependent on your disk speed).
@@ -28,30 +27,27 @@ Common commands in case you need some help!
 `spc host -v`
 
 # Set an initial host configuration to seed.
-```
-spc host config collateral 50SCP
-spc host config mincontractprice 5SCP
-spc host config mindownloadbandwidthprice 25SCP
-spc host config minstorageprice 100SCP
-spc host config minuploadbandwidthprice 25SCP
-```
+    spc host config collateral 50SCP
+    spc host config mincontractprice 5SCP
+    spc host config mindownloadbandwidthprice 25SCP
+    spc host config minstorageprice 100SCP
+    spc host config minuploadbandwidthprice 25SCP
 
 # Setup your wallet (You'll need coins to host).
-```spc wallet init```
+`spc wallet init`
 NB: Write down your seed and keep in a safe place, do not share. 
 
-```spc wallet get-address```
+`spc wallet get-address`
 
 # Check your 'netaddress' is discovered and present ok, or set it manually.
-```spc host -v | egrep netaddress
-spc host config netaddress <Your IP address>:4282
-```
+    spc host -v | egrep netaddress
+    spc host config netaddress <Your IP address>:4282
 
 # Check your install can be seen from the internet!
 Use a service like http://www.canyouseeme.org/ to check 4282 responds. If it does, hey presto, you're in business. If not, you have some diagnostics to do - is port forwarding working on your router?
 
 # Announce your host as available!
-```spc host announce```
+`spc host announce`
 
 Happy hosting. Now tell your friends. :)
 
