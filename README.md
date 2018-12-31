@@ -29,9 +29,9 @@ Common commands in case you need some help!
 # Set an initial host configuration to seed.
     spc host config collateral 50SCP
     spc host config mincontractprice 5SCP
-    spc host config mindownloadbandwidthprice 25SCP
-    spc host config minstorageprice 100SCP
-    spc host config minuploadbandwidthprice 25SCP
+    spc host config mindownloadbandwidthprice 500SCP
+    spc host config minstorageprice 3500SCP
+    spc host config minuploadbandwidthprice 500SCP
 
 # Setup your wallet (You'll need coins to host).
 `spc wallet init`
