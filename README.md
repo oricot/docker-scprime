@@ -8,7 +8,7 @@ Rent out your hard disk space to earn spare cash, or buy cheap disk space. Encou
 
 # Notes
 * To start the daemon:
-  `docker run -d --name=siaprime -v /my/local/disk/hs:/hs -p 4281:4281 -p 4282:4282 --restart=always afdy/siaprime`
+  `docker run -d --name=siaprime -v /my/local/disk/sp:/sp -p 4281:4281 -p 4282:4282 --restart=always afdy/siaprime`
 * Replace ```/my/local/disk``` with the path to your spare persistent storage.
 * Additionally pass ```-p 4280:4280``` if you really want to expose the API port (avoid!).
 * It'll take a while to sync with the network before it becomes operational (dependent on your disk speed).
