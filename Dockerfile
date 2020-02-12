@@ -7,8 +7,8 @@ RUN apt-get update && \
     mkdir -p /hs && \
     wget -O /tmp/install.zip https://scpri.me/releases/ScPrime-v${VERSION}-linux-amd64.zip && \
     unzip -d /tmp/install/ /tmp/install.zip && \
-    mv /tmp/install/SiaPrime-v${VERSION}-linux-amd64/spc /usr/local/bin/ && \
-    mv /tmp/install/SiaPrime-v${VERSION}-linux-amd64/spd /usr/local/bin/ && \
+    mv /tmp/install/ScPrime-v${VERSION}-linux-amd64/spc /usr/local/bin/ && \
+    mv /tmp/install/ScPrime-v${VERSION}-linux-amd64/spd /usr/local/bin/ && \
     rm -rf /tmp/install/ /tmp/install.zip /var/lib/apt/lists
 
 WORKDIR /sp
