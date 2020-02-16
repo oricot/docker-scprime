@@ -1,14 +1,14 @@
 # Introduction
-Source for the SiaPrime docker image at https://cloud.docker.com/repository/docker/afdy/siaprime
+Source for the ScPrime docker image at https://cloud.docker.com/repository/docker/afdy/siaprime
 
-# SiaPrime?
-See the official site at https://siaprime.net/
+# ScPrime (was: SiaPrime)?
+See the official site at https://scpri.me/
 
 Rent out your hard disk space to earn spare cash, or buy cheap disk space. Encourage a distributed world and avoid mega corporations owning all your data.
 
 # Notes
 * To start the daemon:
-  `docker run -d --name=siaprime -v /my/local/disk/sp:/sp -p 4281:4281 -p 4282:4282 --restart=always afdy/siaprime`
+  `docker run -d --name=scprime -v /my/local/disk/sp:/sp -p 4281:4281 -p 4282:4282 --restart=always afdy/siaprime`
 * Replace ```/my/local/disk``` with the path to your spare persistent storage.
 * Additionally pass ```-p 4280:4280``` if you really want to expose the API port (avoid!).
 * It'll take a while to sync with the network before it becomes operational (dependent on your disk speed).
@@ -18,7 +18,7 @@ Rent out your hard disk space to earn spare cash, or buy cheap disk space. Encou
 Common commands in case you need some help!
 
 # Jump on the CLI of the node:
-`docker exec -it siaprime bash`
+`docker exec -it scprime bash`
 
 # See client sync status.
 `spc`
@@ -27,12 +27,11 @@ Common commands in case you need some help!
 `spc host -v`
 
 # Set an initial host configuration to seed.
-    spc host config collateral 50SCP
-    spc host config mincontractprice 5SCP
-    spc host config mindownloadbandwidthprice 500SCP
-    spc host config minstorageprice 3500SCP
-    spc host config minuploadbandwidthprice 500SCP
-
+    spc host config maxcollateral 60 SCP
+    spc host config collateralbudget 4 KS
+    spc host config minstorageprice 10 SCP
+    spc host config collateral 17.5 SCP
+  
 # Setup your wallet (You'll need coins to host).
 `spc wallet init`
 NB: Write down your seed and keep in a safe place, do not share. 
