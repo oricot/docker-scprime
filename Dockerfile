@@ -14,4 +14,5 @@ RUN apt-get update && \
 WORKDIR /sp
 EXPOSE 4281 4282
 
-CMD ["/usr/local/bin/spd"]
+# Additional parameters hopefully pass on the old behaviour.
+CMD ["/usr/local/bin/spd","--scprime-directory","./"]
