@@ -12,7 +12,7 @@ RUN apt-get update && \
     rm -rf /tmp/install/ /tmp/install.zip /var/lib/apt/lists
 
 WORKDIR /sp
-EXPOSE 4281 4282
+EXPOSE 4281 4282 4283 4284
 
-# Additional parameters hopefully pass on the old behaviour.
-CMD ["/usr/local/bin/spd","--scprime-directory","./"]
+# bind api port to all interfaces in case we want to use it, we don't expose it by default.
+CMD ["/usr/local/bin/spd", "--scprime-directory", "./", "--api-addr=0.0.0.0:4280", "--disable-api-security"]
