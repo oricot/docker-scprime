@@ -1,7 +1,7 @@
 # Introduction
 Source for the ScPrime docker image at https://cloud.docker.com/repository/docker/afdy/siaprime
 
-# ScPrime (was: SiaPrime)?
+# ScPrime
 See the official site at https://scpri.me/
 
 Rent out your hard disk space to earn spare cash, or buy cheap disk space. Encourage a distributed world and avoid mega corporations owning all your data.
